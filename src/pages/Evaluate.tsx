@@ -81,14 +81,7 @@ export default function Evaluate() {
   const runAudit = async () => {
     if (!canRunAudit) return;
 
-    if (!user) {
-      toast({
-        title: "Sign in required",
-        description: "Please sign in to run a pre-audit and save your reports.",
-      });
-      navigate("/auth");
-      return;
-    }
+    // Authentication not required for pre-audit
 
     setIsProcessing(true);
     setProgress(0);
